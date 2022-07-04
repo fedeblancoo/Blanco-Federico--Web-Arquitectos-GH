@@ -70,9 +70,12 @@ header ul {
     display: flex;
     justify-content: space-between;
     padding: 0 1rem;
+    transition: font-size 0.5s;
 }
 
-
+header li:hover {
+    font-size: 1.7rem;
+}
 
 
 
@@ -172,10 +175,30 @@ footer a {
 
 /* INDEX */
 
-.divTextoImgIndex {
+.item {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color:  #24d364;
+    width: 12rem;
+    height: 12rem;
+    clip-path: circle(40% at bottom right);
+    transition-property: clip-path;
+    transition-duration: 2s;
+}
+
+.item:hover {
+    clip-path: circle(150% at bottom right);
+}
+
+.sectionTextoImgIndex {
     background-image: url(../images/mainhouse3.jpg);
     background-size: cover;
     background-position: center;
+}
+
+.divTextoImgIndex {
+    
     position: relative;
     width: 100%;
     height: 80vh;
@@ -335,6 +358,8 @@ footer a {
     grid-area: imagenlocal3;
 }
 
+/* ANIMACIÓN */
+
 
 
 
@@ -466,6 +491,10 @@ footer a {
     }
 
     /* INDEX */
+
+    .item {
+        display: none;
+    }
 
     .divTextoImgIndex {
         align-items: flex-start;
