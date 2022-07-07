@@ -1,15 +1,16 @@
 html {
     font-size: 62.5%;
-    font-family: 'Quicksand', sans-serif;
     padding:0;
     margin: 0;
 }
 
 body {
     background-color: black;
-    display: flex;
     justify-content: center;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .divgeneral {
@@ -40,6 +41,7 @@ li {
 
 
 /* HEADER */
+
 
 header {
     background-color: #ebe7ef;
@@ -77,6 +79,13 @@ header li:hover {
     font-size: 1.7rem;
 }
 
+#boton-contactanos {
+    background-color: #FFA942;
+}
+
+.navbar-nav li {
+    font-size: 1.8rem;
+} 
 
 
 /* FOOTER */
@@ -358,8 +367,52 @@ footer a {
     grid-area: imagenlocal3;
 }
 
-/* ANIMACIÓN */
+/* CONTACTO */
 
+.section-contacto {
+    display: flex;
+    justify-content: space-around;
+}
+
+.section-contacto h2 {
+    margin: 1rem 1rem 1rem 2.5rem;
+    padding: 0 0 1rem 1rem;
+    border-bottom:solid 1px #FFA942;
+}
+
+.section-contacto p {
+    font-size: 1.7rem;
+    padding-left: 1rem;
+}
+
+.div-contactanos-contacto {
+    width: 40%;
+}
+
+.div-img-contactanos-contacto {
+    background-color: aqua;
+    display:flex;
+}
+
+.div-formulario-contacto {
+    width: 40%;
+}
+
+.simboloscontacto {
+    height: 1rem;
+}
+
+.div-iframe {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    height: 30vh;
+    border: solid 2px black;
+}
+
+iframe {
+    width:100%;
+    height: calc(100% - 2px);
+}
 
 
 
@@ -564,6 +617,32 @@ footer a {
         font-size: 2rem;
         text-align: center;
     }    
+
+    /* CONTACTO */
+
+    .section-contacto {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "div-contacto1" "div-contacto2";
+        row-gap: 2rem;
+    }
+
+    .div-contactanos-contacto {
+        width: 100%;
+        grid-area: div-contacto1;
+    }
+
+    .div-formulario-contacto {
+        width: 100%;
+        grid-area: div-contacto2;
+    }
+
+    .section-contacto h2 {
+        font-size: 2.3rem;
+    }
+
+
 }
 
 @media screen and (max-width: 450px) {
