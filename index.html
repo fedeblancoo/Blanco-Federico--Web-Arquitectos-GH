@@ -5,48 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G|Harquitectura</title>
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
     <!--GoogleFont - Quicksand-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
     </style>
-
+    
 </head>
 
 <body>
+    
     <div class="divgeneral">
         <header>
-            <div class="logoh1">
-                <a href="index.html"><img src="images/logonegro.png" alt="logoarquitectosGH" class="logoprincipal"></a>
-                <h1>Arquitectura</h1>
-            </div>  
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="pages/sobrenosotros.html">Sobre nosotros</a></li>
-                    <li><a href="pages/servicios.html">Servicios</a></li>
-                    <li><a href="pages/galeria.html">Galería</a></li>
-                    <li  id="Contactanos"><a href="pages/contacto.html">¡Contactanos!</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg bg-light col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-1 border-light">
+                <div class="container-fluid" >
+                    <div class="d-flex justify-content-start align-items-center">
+                        <a href="index.html"><img src="images/logonegro.png" alt="logoarquitectosGH" class="logoprincipal"></a>
+                        <a class="navbar-brand fs-20" href="index.html"><h1><strong>Arquitectura</strong></h1></a>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active px-4" aria-current="page" href="index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active px-4" aria-current="page" href="pages/sobrenosotros.html">Sobre Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active px-4" aria-current="page" href="pages/servicios.html">Servicios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active px-4" aria-current="page" href="pages/galeria.html">Galería</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active btn btn mb-3 px-5" aria-current="page" href="pages/contacto.html" id="boton-contactanos"><strong>¡Contactanos!</strong></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>
             </nav>
         </header>
+        
 
         <main class="mainindex">
 
 
             <section class="sectionTextoImgIndex">
-                <div class="divTextoImgIndex"> <!-- La imagen principal del Index no es la definitiva--> 
+                <div class="divTextoImgIndex">
                     <div class="divFondoNaranja">
                         
                     </div>
                     <p><strong> Asesoramiento Integral <br> Arquitectónico </strong></p>
 
-                </div>
-                <div class="esquinaWA">
-                    <div class="item">
-                        <a href="#" target="_blank"><img src="images/logowhatsappcolor.png"class="logoredes">
+                    <div class="esquinaWA">
+                        <div class="item">
+                            <a href="#" target="_blank"><img src="images/logowhatsappcolor.png"class="logoredes">
+                        </div>
                     </div>
+
                 </div>
+                
             </section>
 
 
@@ -57,7 +83,7 @@
                     <div class="div-iconos">
                         <img src="images/casita.gif" class="iconosServiciosIndex">
                     </div>
-                    <h3>DISEÑO ARQUITECTÓNICO</h3>
+                    <h3><strong> DISEÑO ARQUITECTÓNICO</strong></h3>
                     <p>Viviendas y edificios de mediano porte. <br>
                         Planos generales de carácter distributivo.<br>
                         Diseño de interiores y de mobiliario. <br>
@@ -68,7 +94,7 @@
                     <div class="div-iconos">
                         <img src="images/lapiztuerca.gif" class="iconosServiciosIndex">
                     </div>
-                    <h3>REMODELACIONES PARCIALES <br>O TOTALES</h3>
+                    <h3><strong>REMODELACIONES PARCIALES <br>O TOTALES</strong></h3>
                     <p>Reformas de viviendas, locales comerciales, <br>
                          fachadas, instalaciones de infraestructura. <br>
                         Optimizamos al máximo tus espacios
@@ -78,7 +104,7 @@
                     <div class="div-iconos">
                         <img src="images/trabajador.gif" class="iconosServiciosIndex">
                     </div>
-                    <h3>DIRECCIÓN DE OBRA</h3>
+                    <h3><strong>DIRECCIÓN DE OBRA</strong></h3>
                     <p>
                         Supervición de proyectos desde el inicio. <br>
                         Informe de avances. <br>
@@ -87,10 +113,11 @@
                 </div>
             </section>
 
-            <div class="divLinkServiciosIndex">
-                <a href="pages/servicios.html"><strong>CONOCÉ MÁS SOBRE NUESTROS SERVICIOS</strong></a>
+            <div class="d-flex justify-content-center">
+                <div class="divLinkServiciosIndex">
+                    <a class="nav-link active btn btn mb-3 px-5" aria-current="page" href="pages/servicios.html" id="boton-contactanos"><strong>CONOCÉ MÁS SOBRE NUESTROS SERVICIOS</strong></a>
+                </div>
             </div>
-
         </main>
      
         <footer>
@@ -117,10 +144,13 @@
             <div class="divfooter2">
                 <nav>
                     <ul>
+                        <li><a href="../index.html">Inicio</a></li>
                         <li><a href="pages/sobrenosotros.html">Sobre nosotros</a></li>
                         <li><a href="pages/servicios.html">Servicios</a></li>
                         <li><a href="pages/galeria.html">Galería</a></li>
-                        <li id="Contactanos"><a href="pages/contacto.html">¡Contactanos!</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link active btn btn mb-3 px-5" aria-current="page" href="pages/contacto.html" id="boton-contactanos-footer"><strong>¡Contactanos!</strong></a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -134,5 +164,7 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
+
 </html>

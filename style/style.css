@@ -1,15 +1,16 @@
 html {
     font-size: 62.5%;
-    font-family: 'Quicksand', sans-serif;
     padding:0;
     margin: 0;
 }
 
 body {
     background-color: black;
-    display: flex;
     justify-content: center;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .divgeneral {
@@ -36,17 +37,20 @@ li {
     padding-bottom: 1rem;
     border-top: solid 0.2rem black;
     border-bottom: solid 0.2rem black;
+    margin-top: 1rem;
 }
 
 
 /* HEADER */
+
 
 header {
     background-color: #ebe7ef;
     display: flex;
     justify-content:space-between;
     align-items: center;
-    border-bottom: solid 0.4rem black;
+    border-top: solid 0.2rem black;
+    border-bottom: solid 0.2rem black;
 }
 
 .logoh1 {
@@ -74,9 +78,17 @@ header ul {
 }
 
 header li:hover {
-    font-size: 1.7rem;
+    font-size: 2rem;
+    transition-duration: 0.5s;
 }
 
+#boton-contactanos {
+    background-color: #FFA942;
+}
+
+.navbar-nav li {
+    font-size: 1.8rem;
+} 
 
 
 /* FOOTER */
@@ -98,8 +110,13 @@ footer {
 footer li,
 footer a {
     color: white;
+    transition-property: color;
+    transition-duration: 0.2s;
 }
 
+.divfooter2 a:hover {
+    color: #FFA942;
+}
 
 .logoYtextofooter {
     display: flex;
@@ -158,6 +175,18 @@ footer a {
     padding: 1rem 0;
 }
 
+#boton-contactanos-footer {
+    display: inline;
+    padding: 1rem;
+    transition-property: background-color color;
+    transition-duration: 0.2s;
+}
+
+#boton-contactanos-footer:hover {
+    background-color: #FFA942;
+    color:black;
+}
+
 .divfooter3 h3 {
     text-align: center;
 }
@@ -201,7 +230,7 @@ footer a {
     
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 84vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -233,6 +262,7 @@ footer a {
 .sectionNuestrosServicios h3,
 .sectionNuestrosServicios p {
     text-align: center;
+    margin: 1.4rem 0;
 }
 
 .div-iconos {
@@ -241,10 +271,9 @@ footer a {
 }
 
 .divLinkServiciosIndex {
-    display: inline-block;
-    background-color: #FFA942;
-    font-size: 2rem;
-    margin: 2rem 0;
+   display: inline-block;
+   font-size: 2rem;
+   margin: 4rem 2rem 2rem 2rem;
 }
 
 /* SOBRE NOSOTROS */
@@ -268,6 +297,12 @@ footer a {
     grid-area: foto2;
 }
 
+#fotoArquitectosGati div,
+#fotoArquitectosHerrera div {
+    display: flex;
+    justify-content: center;
+}
+
 #infoPersonal {
     grid-area: texto;
     width: 96%;
@@ -280,6 +315,7 @@ footer a {
 
 .sectionSobreNosotros h3 {
     text-align: center;
+    margin: 1.5rem 0;
 }
 
 #infoPersonal div {
@@ -358,8 +394,72 @@ footer a {
     grid-area: imagenlocal3;
 }
 
-/* ANIMACIÓN */
 
+
+/* CONTACTO */
+
+
+
+.section-contacto {
+    display: flex;
+    justify-content: space-around;
+}
+
+.section-contacto h2 {
+    margin: 1rem 1rem 1rem 2.5rem;
+    padding: 0 0 1rem 1rem;
+    border-bottom:solid 1px #FFA942;
+}
+
+.section-contacto p {
+    font-size: 1.7rem;
+    padding-left: 1rem;
+}
+
+.div-contactanos-contacto {
+    width: 40%;
+}
+
+.div-img-contactanos-contacto {
+    display:flex;
+    margin: 0 2rem;
+}
+
+.div-img-contactanos-contacto img {
+    height: 8vh;
+    margin: 1rem 2rem;
+    transition-property: height;
+    transition-duration: 0.5s;
+}
+
+.div-img-contactanos-contacto img:hover {
+    height: 8.5vh;
+}
+
+.div-formulario-contacto {
+    width: 40%;
+}
+
+.div-formulario-contacto button {
+    font-size: 1.8rem;
+}
+    
+
+.simboloscontacto {
+    height: 1rem;
+}
+
+.div-iframe {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    height: 30vh;
+    border: solid 2px black;
+}
+
+iframe {
+    width:100%;
+    height: calc(100% - 2px);
+}
 
 
 
@@ -419,6 +519,10 @@ footer a {
 
 @media screen and (max-width: 750px) {
 
+    .tituloDePagina {
+        font-size: 2.2rem;
+    }
+
     /* HEADER */
 
     h1 {
@@ -429,7 +533,7 @@ footer a {
         height: 6.5rem;
         margin: 1rem 1rem 1rem 2rem;
     }
-
+    /*
     header nav {
         display: none;
         border-top: 0;
@@ -456,7 +560,7 @@ footer a {
         border-top: solid 1px #a899b8 ;
         border-bottom: solid 1px #a899b8;
     }
-
+    /*
     /* FOOTER */
 
     footer { 
@@ -534,21 +638,39 @@ footer a {
         grid-template-columns: auto;
         grid-template-rows: auto auto auto;
         grid-template-areas: "foto1" "foto2" "texto";
+        border-bottom: 0;
+    }
+
+    .sectionSobreNosotros h3 {
+        font-size: 2.2rem;
     }
 
     #infoPersonal {
+        border-top:#FFA942 solid 1px;
         width: 100%;
+        margin-top: 1rem;
     }
+
+    .citaSobreNosotros {
+        margin: 1rem 0;
+    }
+
+    .textoUniversidad {
+        margin: 1rem 0;
+    }
+
 
     .divTextoNuestraOficina {
         display: flow-root;
-        margin: 1.5rem;
+        margin: 1.8rem 1.5rem;
+        border-top:#FFA942 solid 1px;
     }
 
     .divTextoNuestraOficinah3 {
         border-right: 0;
         border-bottom: solid 2px #FFA942;
-        margin-right: 0;
+        margin: 2rem 0;
+        padding-bottom: 1.25rem;
     }
 
     .divTextoNuestraOficina div {
@@ -564,6 +686,32 @@ footer a {
         font-size: 2rem;
         text-align: center;
     }    
+
+    /* CONTACTO */
+
+    .section-contacto {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "div-contacto1" "div-contacto2";
+        row-gap: 2rem;
+    }
+
+    .div-contactanos-contacto {
+        width: 100%;
+        grid-area: div-contacto1;
+    }
+
+    .div-formulario-contacto {
+        width: 100%;
+        grid-area: div-contacto2;
+    }
+
+    .section-contacto h2 {
+        font-size: 2.3rem;
+    }
+
+
 }
 
 @media screen and (max-width: 450px) {
