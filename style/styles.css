@@ -64,10 +64,10 @@ header img {
 }
 header li {
   font-size: 1.8rem;
-  transition-property: font-size;
+  transition-property: color;
 }
 header li:hover {
-  font-size: 2rem;
+  color: #FFA942;
   transition-duration: 0.5s;
 }
 header #boton-contactanos {
@@ -149,7 +149,7 @@ footer #boton-contactanos-footer {
   transition-duration: 0.2s;
 }
 footer #boton-contactanos-footer:hover {
-  color: black; /*               <-- esta propiedad no me la toma*/
+  color: black; /*            <-- esta propiedad no me la toma*/
   background-color: #FFA942;
 }
 footer .divfooter3 h3 {
@@ -353,9 +353,18 @@ footer .divfooter3 img {
   height: 45vh;
 }
 .main-servicios .servicios-div-img-1 {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  background-color: #24d364;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
   padding: 1rem 0;
+}
+.main-servicios .servicios-div-img-1 div {
+  display: flex;
+  justify-content: center;
+}
+.main-servicios .servicios-div-img-1 div img {
+  width: 90%;
 }
 .main-servicios .servicios-div-render {
   display: flex;
