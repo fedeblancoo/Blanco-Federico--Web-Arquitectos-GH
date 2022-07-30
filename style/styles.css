@@ -1,4 +1,17 @@
 @charset "UTF-8";
+/* Mapa */
+.facebook {
+  background-color: #3b5998;
+}
+
+.instagram {
+  background-color: #C13584;
+}
+
+.whatsapp {
+  background-color: #24d364;
+}
+
 /* GENERAL */
 html {
   font-size: 62.5%;
@@ -129,14 +142,15 @@ footer .divfooter2 ul li {
   padding: 1rem 0;
 }
 footer #boton-contactanos-footer {
+  color: white;
   display: inline;
   padding: 1rem;
-  transition-property: color background-color;
+  transition-property: background-color;
   transition-duration: 0.2s;
 }
 footer #boton-contactanos-footer:hover {
+  color: black; /*               <-- esta propiedad no me la toma*/
   background-color: #FFA942;
-  color: black;
 }
 footer .divfooter3 h3 {
   text-align: center;
@@ -148,7 +162,7 @@ footer .divfooter3 ul {
   justify-content: space-around;
 }
 footer .divfooter3 img {
-  height: 5rem;
+  height: 8vh;
 }
 
 /* INDEX */
@@ -193,13 +207,15 @@ footer .divfooter3 img {
   z-index: 2;
 }
 
-.mainindex h2 {
+.h2-index, .h2-servicios {
+  font-size: 2.2rem;
   text-align: center;
   padding: 2.5rem 0;
   border-top: #FFA942 solid 2px;
   border-bottom: #FFA942 solid 2px;
   margin: 2rem 7rem 2rem 7rem;
 }
+
 .mainindex .sectionNuestrosServicios {
   display: flex;
   justify-content: space-around;
@@ -230,37 +246,33 @@ footer .divfooter3 img {
        column-gap: 1rem;
   border-bottom: solid 1px #FFA942;
 }
-
-#fotoArquitectosGati {
+.sectionSobreNosotros #fotoArquitectosGati {
   grid-area: foto1;
 }
-
-#fotoArquitectosHerrera {
-  grid-area: foto2;
-}
-
-#fotoArquitectosGati div,
-#fotoArquitectosHerrera div {
+.sectionSobreNosotros #fotoArquitectosGati div {
   display: flex;
   justify-content: center;
 }
-
-#infoPersonal {
+.sectionSobreNosotros #fotoArquitectosHerrera {
+  grid-area: foto2;
+}
+.sectionSobreNosotros #fotoArquitectosHerrera div {
+  display: flex;
+  justify-content: center;
+}
+.sectionSobreNosotros #infoPersonal {
   grid-area: texto;
   width: 96%;
 }
-
 .sectionSobreNosotros img {
   width: calc(100% - 2rem);
   padding: 1rem 1rem 0 1rem;
 }
-
 .sectionSobreNosotros h3 {
   text-align: center;
   margin: 1.5rem 0;
 }
-
-#infoPersonal div {
+.sectionSobreNosotros #infoPersonal div {
   display: flex;
   align-items: center;
   height: 50%;
@@ -268,8 +280,7 @@ footer .divfooter3 img {
   text-align: center;
   font-size: 2rem;
 }
-
-.citaSobreNosotros {
+.sectionSobreNosotros #infoPersonal .citaSobreNosotros {
   border-bottom: solid 1px #FFA942;
 }
 
@@ -278,23 +289,19 @@ footer .divfooter3 img {
   align-items: center;
   margin: 1rem;
 }
-
 .divTextoNuestraOficina div {
   width: 50%;
 }
-
-.divTextoNuestraOficinah3 {
-  border-right: solid 2px #FFA942;
-  margin-right: 1.5rem;
-}
-
 .divTextoNuestraOficina h3 {
   font-size: 2.5rem;
   text-align: center;
 }
-
 .divTextoNuestraOficina p {
   font-size: 2rem;
+}
+.divTextoNuestraOficina .divTextoNuestraOficinah3 {
+  border-right: solid 2px #FFA942;
+  margin-right: 1.5rem;
 }
 
 .divImgNuestraOficina {
@@ -304,36 +311,66 @@ footer .divfooter3 img {
   grid-template-rows: auto;
   grid-template-areas: "imagenlocal1 imagenlocal2 imagenlocal3";
 }
-
 .divImgNuestraOficina div {
   margin: 1rem;
 }
-
-.divimg1,
-.divimg2,
-.divimg3 {
+.divImgNuestraOficina .divimg1,
+.divImgNuestraOficina .divimg2,
+.divImgNuestraOficina .divimg3 {
   height: 58vh;
 }
-
-.divimg1 {
+.divImgNuestraOficina .divimg1 {
   background-image: url(../images/nuestraoficina1.jpg);
   background-size: cover;
   background-position: center;
   grid-area: imagenlocal1;
 }
-
-.divimg2 {
+.divImgNuestraOficina .divimg2 {
   background-image: url(../images/nuestraoficina2.jpg);
   background-size: cover;
   background-position: center;
   grid-area: imagenlocal2;
 }
-
-.divimg3 {
+.divImgNuestraOficina .divimg3 {
   background-image: url(../images/nuestraoficina3.jpg);
   background-size: cover;
   background-position: center;
   grid-area: imagenlocal3;
+}
+
+/* SERVICIOS */
+.main-servicios .servicios-div-cita {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2.5rem 0 1rem 0;
+}
+.main-servicios h3 {
+  font-size: 2.2rem;
+  padding: 2.5rem 0;
+  border-bottom: #FFA942 solid 2px;
+}
+.main-servicios img {
+  height: 45vh;
+}
+.main-servicios .servicios-div-img-1 {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+.main-servicios .servicios-div-render {
+  display: flex;
+  justify-content: space-around;
+}
+.main-servicios .servicios-div-render .servicios-div-render-texto {
+  margin-top: 2rem;
+}
+.main-servicios .servicios-div-render p {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.main-servicios .p-principales {
+  text-align: center;
+  font-size: 2rem;
 }
 
 /* CONTACTO */
@@ -341,48 +378,39 @@ footer .divfooter3 img {
   display: flex;
   justify-content: space-around;
 }
-
 .section-contacto h2 {
   margin: 1rem 1rem 1rem 2.5rem;
   padding: 0 0 1rem 1rem;
   border-bottom: solid 1px #FFA942;
 }
-
 .section-contacto p {
   font-size: 1.7rem;
   padding-left: 1rem;
 }
-
-.div-contactanos-contacto {
+.section-contacto .div-contactanos-contacto {
   width: 40%;
 }
-
-.div-img-contactanos-contacto {
+.section-contacto .div-contactanos-contacto .simboloscontacto {
+  height: 1rem;
+}
+.section-contacto .div-img-contactanos-contacto {
   display: flex;
   margin: 0 2rem;
 }
-
-.div-img-contactanos-contacto img {
+.section-contacto .div-img-contactanos-contacto img {
   height: 8vh;
   margin: 1rem 2rem;
   transition-property: height;
   transition-duration: 0.5s;
 }
-
-.div-img-contactanos-contacto img:hover {
+.section-contacto .div-img-contactanos-contacto img:hover {
   height: 8.5vh;
 }
-
-.div-formulario-contacto {
+.section-contacto .div-formulario-contacto {
   width: 40%;
 }
-
-.div-formulario-contacto button {
+.section-contacto .div-formulario-contacto button {
   font-size: 1.8rem;
-}
-
-.simboloscontacto {
-  height: 1rem;
 }
 
 .div-iframe {
@@ -391,8 +419,7 @@ footer .divfooter3 img {
   height: 30vh;
   border: solid 2px black;
 }
-
-iframe {
+.div-iframe iframe {
   width: 100%;
   height: calc(100% - 2px);
 }
@@ -406,6 +433,18 @@ iframe {
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     grid-template-areas: "imagenlocal1 imagenlocal1" "imagenlocal2 imagenlocal3";
+  }
+  .sectionSobreNosotros {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "foto1 foto2" "texto texto";
+    border-bottom: 0;
+  }
+  .sectionSobreNosotros #infopersonal {
+    margin: 1rem 0 1rem 0;
+  }
+  .sectionSobreNosotros #infopersonal div {
+    padding: 0.5rem 0;
   }
 }
 @media screen and (min-width: 751px) {

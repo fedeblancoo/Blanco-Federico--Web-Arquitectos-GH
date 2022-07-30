@@ -1,6 +1,20 @@
 @import "colores";
 @import "border";
 
+/* Mapa */
+
+$redes: (facebook:#3b5998, instagram:#C13584, whatsapp:#24d364);
+
+@each $red, $color in $redes {
+    .#{$red}{
+        background-color: $color;
+    }
+}
+
+@mixin altura-simbolos-redes {
+    height: 8vh;
+}
+
 /* GENERAL */
 
 html {
@@ -158,14 +172,15 @@ footer {
     }
 
     #boton-contactanos-footer {
+        color: white;
         display: inline;
         padding: 1rem;
-        transition-property: color background-color ;
+        transition-property: background-color ;
         transition-duration: 0.2s;
         
         &:hover {
+            color:black;    /*               <-- esta propiedad no me la toma*/
             background-color: #FFA942;
-            color:black;
         }
     }
 
@@ -180,7 +195,7 @@ footer {
             justify-content: space-around;
         }
         img {
-            height: 5rem;
+            @include altura-simbolos-redes;
         }
     }
 }
@@ -192,7 +207,7 @@ footer {
     position:absolute;
     right: 0;
     bottom: 0;
-    background-color:  #24d364;
+    background-color: map-get($map: $redes , $key: whatsapp );  
     width: 12rem;
     height: 12rem;
     clip-path: circle(40% at bottom right);
@@ -227,15 +242,17 @@ footer {
     }
 }
 
+.h2-index {
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 2.5rem 0;
+    border-top: $border-colorprincipal;
+    border-bottom: $border-colorprincipal;
+    margin: 2rem 7rem 2rem 7rem;
+}
 
 .mainindex {
-    h2 {
-        text-align: center;
-        padding: 2.5rem 0;
-        border-top: $border-colorprincipal;
-        border-bottom: $border-colorprincipal;
-        margin: 2rem 7rem 2rem 7rem;
-    }
+    
 
     .sectionNuestrosServicios {
         display: flex;
@@ -272,73 +289,81 @@ footer {
     grid-template-areas: "foto1 foto2 texto";
     column-gap: 1rem;
     border-bottom: solid 1px #FFA942;
+
+    #fotoArquitectosGati {
+        grid-area: foto1;
+        
+        div {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    #fotoArquitectosHerrera {
+        grid-area: foto2;
+
+        div {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    #infoPersonal {
+        grid-area: texto;
+        width: 96%;
+    }
+
+    img {
+        width: calc(100% - 2rem);
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    h3 {
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+    
+    #infoPersonal {
+        div {
+            display: flex;
+            align-items: center;
+            height: 50%;
+            justify-content: center;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .citaSobreNosotros {
+            border-bottom: solid 1px #FFA942;
+        }
+    }
 }
 
-#fotoArquitectosGati {
-    grid-area: foto1;
-}
-
-#fotoArquitectosHerrera {
-    grid-area: foto2;
-}
-
-#fotoArquitectosGati div,
-#fotoArquitectosHerrera div {
-    display: flex;
-    justify-content: center;
-}
-
-#infoPersonal {
-    grid-area: texto;
-    width: 96%;
-}
-
-.sectionSobreNosotros img {
-    width: calc(100% - 2rem);
-    padding: 1rem 1rem 0 1rem;
-}
-
-.sectionSobreNosotros h3 {
-    text-align: center;
-    margin: 1.5rem 0;
-}
-
-#infoPersonal div {
-    display: flex;
-    align-items: center;
-    height: 50%;
-    justify-content: center;
-    text-align: center;
-    font-size: 2rem;
-}
-
-.citaSobreNosotros {
-    border-bottom: solid 1px #FFA942;
-}
 
 .divTextoNuestraOficina {
     display: flex;
     align-items: center;
     margin: 1rem;
+
+    div {
+        width: 50%;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    .divTextoNuestraOficinah3 {
+        border-right:solid 2px #FFA942;
+        margin-right: 1.5rem;
+    }
 }
 
-.divTextoNuestraOficina div {
-    width: 50%;
-}
-
-.divTextoNuestraOficinah3 {
-    border-right:solid 2px #FFA942;
-    margin-right: 1.5rem;
-}
-
-.divTextoNuestraOficina h3 {
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-.divTextoNuestraOficina p {
-    font-size: 2rem;
-}
 
 .divImgNuestraOficina {
     margin: 1rem;
@@ -346,38 +371,94 @@ footer {
     grid-template-columns: 50% 25% 25%;
     grid-template-rows: auto;
     grid-template-areas: "imagenlocal1 imagenlocal2 imagenlocal3";
+
+    div {
+        margin: 1rem;
+    }
+
+    .divimg1,
+    .divimg2,
+    .divimg3 {
+        height: 58vh;
+    }
+    
+    .divimg1 {
+        background-image: url(../images/nuestraoficina1.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-area: imagenlocal1;
+    }
+
+    .divimg2 {
+        background-image: url(../images/nuestraoficina2.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-area: imagenlocal2;
+    }
+
+    .divimg3 {
+        background-image: url(../images/nuestraoficina3.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-area: imagenlocal3;
+    }
+
 }
 
-.divImgNuestraOficina div {
-    margin: 1rem;
+
+/* SERVICIOS */
+
+.h2-servicios {
+    @extend .h2-index;
 }
 
-.divimg1,
-.divimg2,
-.divimg3 {
-    height: 58vh;
+.main-servicios {
+
+    .servicios-div-cita {
+        text-align: center;
+        font-size: 2rem;
+        padding: 2.5rem 0 1rem 0;
+    }
+    
+    h3 {
+        font-size: 2.2rem;
+        padding: 2.5rem 0;
+        border-bottom: $border-colorprincipal;
+    }
+
+    img {
+        height: 45vh;
+    }
+    
+    .servicios-div-img-1 {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem 0;
+    }
+
+    .servicios-div-render {
+        display: flex;
+        justify-content: space-around;
+
+        .servicios-div-render-texto {
+            margin-top: 2rem;
+        }
+
+        p {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+    
+    }
+
+    .p-principales { 
+        text-align: center;
+        font-size: 2rem;
+    }
 }
 
-.divimg1 {
-    background-image: url(../images/nuestraoficina1.jpg);
-    background-size: cover;
-    background-position: center;
-    grid-area: imagenlocal1;
-}
 
-.divimg2 {
-    background-image: url(../images/nuestraoficina2.jpg);
-    background-size: cover;
-    background-position: center;
-    grid-area: imagenlocal2;
-}
 
-.divimg3 {
-    background-image: url(../images/nuestraoficina3.jpg);
-    background-size: cover;
-    background-position: center;
-    grid-area: imagenlocal3;
-}
 
 
 
@@ -388,64 +469,64 @@ footer {
 .section-contacto {
     display: flex;
     justify-content: space-around;
-}
 
-.section-contacto h2 {
-    margin: 1rem 1rem 1rem 2.5rem;
-    padding: 0 0 1rem 1rem;
-    border-bottom:solid 1px #FFA942;
-}
+    h2 {
+        margin: 1rem 1rem 1rem 2.5rem;
+        padding: 0 0 1rem 1rem;
+        border-bottom:solid 1px #FFA942;
+    }
 
-.section-contacto p {
-    font-size: 1.7rem;
-    padding-left: 1rem;
-}
+    p {
+        font-size: 1.7rem;
+        padding-left: 1rem;
+    }
 
-.div-contactanos-contacto {
-    width: 40%;
-}
+    .div-contactanos-contacto {
+        width: 40%;
 
-.div-img-contactanos-contacto {
-    display:flex;
-    margin: 0 2rem;
-}
+        .simboloscontacto {
+            height: 1rem;
+        }
 
-.div-img-contactanos-contacto img {
-    height: 8vh;
-    margin: 1rem 2rem;
-    transition-property: height;
-    transition-duration: 0.5s;
-}
-
-.div-img-contactanos-contacto img:hover {
-    height: 8.5vh;
-}
-
-.div-formulario-contacto {
-    width: 40%;
-}
-
-.div-formulario-contacto button {
-    font-size: 1.8rem;
-}
+    }
     
+    .div-img-contactanos-contacto {
+        display:flex;
+        margin: 0 2rem;
 
-.simboloscontacto {
-    height: 1rem;
+        img {
+            @include altura-simbolos-redes;
+            margin: 1rem 2rem;
+            transition-property: height;
+            transition-duration: 0.5s;
+            &:hover {
+                height: 8.5vh;
+            }
+        }
+    }
+
+    .div-formulario-contacto {
+        width: 40%;
+
+        button {
+            font-size: 1.8rem;
+        }
+    }
+
 }
+
 
 .div-iframe {
     margin: 1rem;
     width: calc(100% - 2rem);
     height: 30vh;
     border: solid 2px black;
-}
 
-iframe {
-    width:100%;
-    height: calc(100% - 2px);
+    iframe {
+        width:100%;
+        height: calc(100% - 2px);
+    }
 }
-
 
 
 
@@ -481,6 +562,21 @@ iframe {
         grid-template-columns: 50% 50%;
         grid-template-rows: 50% 50%;
         grid-template-areas: "imagenlocal1 imagenlocal1" "imagenlocal2 imagenlocal3" ;
+    }
+
+    .sectionSobreNosotros {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "foto1 foto2" "texto texto";
+        border-bottom: 0;
+
+        #infopersonal {
+            margin: 1rem 0 1rem 0;
+            
+            div {
+                padding: 0.5rem 0;
+            }
+        }
     }
 }
 
