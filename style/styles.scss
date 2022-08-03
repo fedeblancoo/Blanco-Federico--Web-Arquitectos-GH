@@ -180,7 +180,7 @@ footer {
         transition-duration: 0.2s;
         
         &:hover {
-            color:black;    /*            <-- esta propiedad no me la toma*/
+            color:black;    
             background-color: #FFA942;
         }
     }
@@ -524,6 +524,7 @@ footer {
 }
 
 /* GALERIA */
+
 #galeria {
 
     #imagen-galeria {
@@ -540,11 +541,7 @@ footer {
 
 }
 
-
-
 /* CONTACTO */
-
-
 
 .section-contacto {
     display: flex;
@@ -610,26 +607,7 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* MEDIA QUERIES*/
-
-
 
 
 @media screen and (max-width: 1050px) { 
@@ -646,8 +624,6 @@ footer {
 }
 
 
-
-
 @media screen and (min-width: 751px) {
     .divFondoNaranja {
         width: 50%;
@@ -662,6 +638,7 @@ footer {
         opacity: 0.8;
     }
 }
+
 
 @media screen and (max-width: 750px) {
 
@@ -738,10 +715,7 @@ footer {
                 text-align: center;
                 z-index: 2;
             }
-
         }
-
-
     }
 
     .mainindex {
@@ -750,16 +724,11 @@ footer {
         }
     }
 
-    
-
     /* SOBRE NOSOTROS*/
 
     .sectionSobreNosotros {
         display: flow-root;
         height: 100%;
-        /*grid-template-columns: 100%;
-        grid-template-rows: 40vh 40vh 40vh;
-        grid-template-areas: "div-nombres" "div-logo" "info-personal";*/
         border-bottom: 0;
     
         .div-nombres {
@@ -825,7 +794,6 @@ footer {
             font-size: 2rem;
             text-align: center;
         }
-
 
     }
 
@@ -948,4 +916,3 @@ footer {
     }
 
 }
-
