@@ -84,8 +84,7 @@ footer .divfooter1,
 footer .divfooter2,
 footer .divfooter3 {
   width: 33%;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 2rem;
 }
 footer a, footer li {
   color: white !important;
@@ -236,52 +235,41 @@ footer .divfooter3 img {
 
 /* SOBRE NOSOTROS */
 .sectionSobreNosotros {
-  width: calc(100% - 2rem);
-  margin: 1rem;
+  height: 40vh;
+  margin: 2rem;
   display: grid;
-  grid-template-columns: 30% 30% 40%;
+  grid-template-columns: 35% auto 35%;
   grid-template-rows: auto;
-  grid-template-areas: "foto1 foto2 texto";
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-  border-bottom: solid 1px #FFA942;
+  grid-template-areas: "div-nombres div-logo info-personal";
+  border-bottom: #FFA942 solid 2px;
 }
-.sectionSobreNosotros #fotoArquitectosGati {
-  grid-area: foto1;
+.sectionSobreNosotros .div-nombres {
+  grid-area: div-nombres;
+  margin: auto;
 }
-.sectionSobreNosotros #fotoArquitectosGati div {
-  display: flex;
-  justify-content: center;
+.sectionSobreNosotros .div-nombres p {
+  font-size: 4rem;
 }
-.sectionSobreNosotros #fotoArquitectosHerrera {
-  grid-area: foto2;
+.sectionSobreNosotros .div-nombres h3 {
+  font-size: 2.5rem;
+  margin-left: 12rem;
+  border-bottom: #FFA942 solid 2px;
 }
-.sectionSobreNosotros #fotoArquitectosHerrera div {
-  display: flex;
-  justify-content: center;
+.sectionSobreNosotros .div-logo {
+  grid-area: div-logo;
+  margin: auto;
 }
-.sectionSobreNosotros #infoPersonal {
-  grid-area: texto;
-  width: 96%;
-}
-.sectionSobreNosotros img {
-  width: calc(100% - 2rem);
-  padding: 1rem 1rem 0 1rem;
-}
-.sectionSobreNosotros h3 {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-.sectionSobreNosotros #infoPersonal div {
-  display: flex;
-  align-items: center;
-  height: 50%;
-  justify-content: center;
+.sectionSobreNosotros .info-personal {
+  grid-area: info-personal;
+  margin: auto;
   text-align: center;
   font-size: 2rem;
 }
-.sectionSobreNosotros #infoPersonal .citaSobreNosotros {
-  border-bottom: solid 1px #FFA942;
+.sectionSobreNosotros .info-personal .cita-sobre-nosotros {
+  border-bottom: #FFA942 solid 2px;
+}
+.sectionSobreNosotros .info-personal .texto-universidad {
+  margin-top: 1rem;
 }
 
 .divTextoNuestraOficina {
@@ -305,37 +293,31 @@ footer .divfooter3 img {
 }
 
 .divImgNuestraOficina {
-  margin: 1rem;
   display: grid;
   grid-template-columns: 50% 25% 25%;
   grid-template-rows: auto;
   grid-template-areas: "imagenlocal1 imagenlocal2 imagenlocal3";
 }
-.divImgNuestraOficina div {
-  margin: 1rem;
-}
-.divImgNuestraOficina .divimg1,
-.divImgNuestraOficina .divimg2,
-.divImgNuestraOficina .divimg3 {
-  height: 58vh;
-}
 .divImgNuestraOficina .divimg1 {
-  background-image: url(../images/nuestraoficina1.jpg);
-  background-size: cover;
-  background-position: center;
   grid-area: imagenlocal1;
 }
+.divImgNuestraOficina .divimg1 img {
+  width: 100%;
+  padding: 1rem;
+}
 .divImgNuestraOficina .divimg2 {
-  background-image: url(../images/nuestraoficina2.jpg);
-  background-size: cover;
-  background-position: center;
   grid-area: imagenlocal2;
 }
+.divImgNuestraOficina .divimg2 img {
+  width: 100%;
+  padding: 1rem;
+}
 .divImgNuestraOficina .divimg3 {
-  background-image: url(../images/nuestraoficina3.jpg);
-  background-size: cover;
-  background-position: center;
   grid-area: imagenlocal3;
+}
+.divImgNuestraOficina .divimg3 img {
+  width: 100%;
+  padding: 1rem;
 }
 
 /* SERVICIOS */
@@ -349,37 +331,111 @@ footer .divfooter3 img {
   padding: 2.5rem 0;
   border-bottom: #FFA942 solid 2px;
 }
-.main-servicios img {
-  height: 45vh;
-}
-.main-servicios .servicios-div-img-1 {
-  display: grid;
-  background-color: #24d364;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  padding: 1rem 0;
-}
-.main-servicios .servicios-div-img-1 div {
-  display: flex;
-  justify-content: center;
-}
-.main-servicios .servicios-div-img-1 div img {
-  width: 90%;
-}
-.main-servicios .servicios-div-render {
-  display: flex;
-  justify-content: space-around;
-}
-.main-servicios .servicios-div-render .servicios-div-render-texto {
-  margin-top: 2rem;
-}
-.main-servicios .servicios-div-render p {
-  font-size: 2rem;
-  margin-top: 2rem;
-}
 .main-servicios .p-principales {
   text-align: center;
   font-size: 2rem;
+}
+.main-servicios .servicios-div-3imagenes-render {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "cuaderno planos" "texto-render imagen-render";
+}
+.main-servicios .servicios-div-3imagenes-render #imagen-cuaderno {
+  grid-area: cuaderno;
+  width: 100%;
+  padding: 1rem 1rem 1rem 2rem;
+}
+.main-servicios .servicios-div-3imagenes-render #imagen-planos {
+  grid-area: planos;
+  width: 100%;
+  padding: 1rem 2rem 1rem 1rem;
+}
+.main-servicios .servicios-div-3imagenes-render .div-texto-render {
+  grid-area: texto-render;
+  font-size: 2rem;
+  margin: 4rem 2rem 1rem 2rem;
+}
+.main-servicios .servicios-div-3imagenes-render .imagen-render {
+  grid-area: imagen-render;
+  width: 100%;
+  padding: 4rem 2rem 1rem 1rem;
+}
+.main-servicios .div-remodelaciones {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "titulo-remod titulo-remod" "img-plano texto-descripcion" "img-plano img-descripcion";
+}
+.main-servicios .div-remodelaciones h3 {
+  text-align: end;
+  grid-area: titulo-remod;
+  margin-left: 50%;
+  margin-right: 2rem;
+}
+.main-servicios .div-remodelaciones p {
+  font-size: 2rem;
+  width: 100%;
+  text-align: end;
+  grid-area: texto-descripcion;
+  padding: 2rem;
+}
+.main-servicios .div-remodelaciones .imagen-plano {
+  width: 100%;
+  grid-area: img-plano;
+  padding: 2rem;
+}
+.main-servicios .div-remodelaciones .imagen-descripcion-plano {
+  width: 100%;
+  grid-area: img-descripcion;
+  padding: 2rem;
+}
+.main-servicios .div-fachadas {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas: "texto-fachadas img-fachadas";
+}
+.main-servicios .div-fachadas .div-fachadas-titulo-texto {
+  grid-area: texto-fachadas;
+  font-size: 2rem;
+  margin: 4rem 2rem 1rem 2rem;
+}
+.main-servicios .div-fachadas .imagen-fachada {
+  grid-area: img-fachadas;
+  width: 100%;
+  padding: 4rem 2rem 1rem 1rem;
+}
+.main-servicios .div-obras {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "titulodescripcion-obras titulodescripcion-obras" "imagen1-obras imagen2-obras";
+}
+.main-servicios .div-obras .titulodescripcion-obras {
+  grid-area: titulodescripcion-obras;
+}
+.main-servicios .div-obras .imagen1-obras {
+  grid-area: imagen1-obras;
+  width: 100%;
+  padding: 1rem 1rem 1rem 2rem;
+}
+.main-servicios .div-obras .imagen2-obras {
+  grid-area: imagen2-obras;
+  width: 100%;
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+/* GALERIA */
+#galeria #imagen-galeria {
+  width: 100%;
+  height: 30rem;
+}
+#galeria #imagen-galeria:hover {
+  border: 5px solid white;
+}
+#galeria .col-lg-4 {
+  padding: 2rem;
 }
 
 /* CONTACTO */
@@ -440,20 +496,8 @@ footer .divfooter3 img {
     margin: 1rem;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "imagenlocal1 imagenlocal1" "imagenlocal2 imagenlocal3";
-  }
-  .sectionSobreNosotros {
-    grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    grid-template-areas: "foto1 foto2" "texto texto";
-    border-bottom: 0;
-  }
-  .sectionSobreNosotros #infopersonal {
-    margin: 1rem 0 1rem 0;
-  }
-  .sectionSobreNosotros #infopersonal div {
-    padding: 0.5rem 0;
+    grid-template-areas: "imagenlocal1 imagenlocal1" "imagenlocal2 imagenlocal3";
   }
 }
 @media screen and (min-width: 751px) {
@@ -475,7 +519,7 @@ footer .divfooter3 img {
     font-size: 2.2rem;
   }
   /* HEADER */
-  h1 {
+  header h1 {
     font-size: 2.3rem;
   }
   header img {
@@ -485,38 +529,34 @@ footer .divfooter3 img {
   /* FOOTER */
   footer {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(3 100%);
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3 auto);
     grid-template-areas: "div1" "div2" "div3";
   }
-  .divfooter1 {
+  footer .divfooter1 {
     grid-area: div1;
+    width: calc(100% - 4rem);
   }
-  .divfooter2 {
+  footer .divfooter2 {
     grid-area: div2;
-  }
-  .divfooter3 {
-    grid-area: div3;
-  }
-  .divfooter1,
-.divfooter2,
-.divfooter3 {
-    width: 90%;
-  }
-  .divfooter2 {
     border-top: #FFA942 solid 1px;
     border-bottom: #FFA942 solid 1px;
     border-left: 0;
     border-right: 0;
+    width: calc(100% - 4rem);
+  }
+  footer .divfooter3 {
+    grid-area: div3;
+    width: calc(100% - 4rem);
   }
   /* INDEX */
   .item {
     display: none;
   }
-  .divTextoImgIndex {
+  .sectionTextoImgIndex .divTextoImgIndex {
     align-items: flex-start;
   }
-  .divFondoNaranja {
+  .sectionTextoImgIndex .divTextoImgIndex .divFondoNaranja {
     margin-top: 1rem;
     width: 70%;
     height: 29%;
@@ -525,47 +565,60 @@ footer .divfooter3 img {
     position: absolute;
     top: 0;
   }
-  .divTextoImgIndex p {
+  .sectionTextoImgIndex .divTextoImgIndex p {
     color: white;
     width: 70%;
     margin: 0.7rem 0;
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: center;
     z-index: 2;
   }
-  .mainindex h2 {
-    margin: 2rem 5rem;
-  }
-  .sectionNuestrosServicios {
+  .mainindex .sectionNuestrosServicios {
     display: flow-root;
   }
   /* SOBRE NOSOTROS*/
   .sectionSobreNosotros {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "foto1" "foto2" "texto";
+    display: flow-root;
+    height: 100%;
+    /*grid-template-columns: 100%;
+    grid-template-rows: 40vh 40vh 40vh;
+    grid-template-areas: "div-nombres" "div-logo" "info-personal";*/
     border-bottom: 0;
   }
-  .sectionSobreNosotros h3 {
-    font-size: 2.2rem;
+  .sectionSobreNosotros .div-nombres {
+    margin: 1rem;
   }
-  #infoPersonal {
-    border-top: #FFA942 solid 1px;
-    width: 100%;
+  .sectionSobreNosotros .div-nombres p {
+    font-size: 4rem;
+  }
+  .sectionSobreNosotros .div-nombres h3 {
+    font-size: 2.5rem;
+    margin-left: 12rem;
+    border-bottom: #FFA942 solid 2px;
+  }
+  .sectionSobreNosotros .div-logo {
+    height: 13rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  .sectionSobreNosotros .info-personal {
+    margin: 2rem 3rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .sectionSobreNosotros .info-personal .cita-sobre-nosotros {
+    border-bottom: #FFA942 solid 2px;
+  }
+  .sectionSobreNosotros .info-personal .texto-universidad {
     margin-top: 1rem;
-  }
-  .citaSobreNosotros {
-    margin: 1rem 0;
-  }
-  .textoUniversidad {
-    margin: 1rem 0;
   }
   .divTextoNuestraOficina {
     display: flow-root;
-    margin: 1.8rem 1.5rem;
-    border-top: #FFA942 solid 1px;
+    margin: 2rem 1.5rem;
+    border-top: #FFA942 solid 2px;
   }
-  .divTextoNuestraOficinah3 {
+  .divTextoNuestraOficina .divTextoNuestraOficinah3 {
     border-right: 0;
     border-bottom: solid 2px #FFA942;
     margin: 2rem 0;
@@ -582,6 +635,74 @@ footer .divfooter3 img {
     font-size: 2rem;
     text-align: center;
   }
+  .divImgNuestraOficina {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "imagenlocal1" "imagenlocal2" "imagenlocal3";
+  }
+  /* SERVICIOS */
+  .main-servicios .servicios-div-3imagenes-render {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "cuaderno" "planos" "texto-render" "imagen-render";
+  }
+  .main-servicios .servicios-div-3imagenes-render #imagen-cuaderno,
+.main-servicios .servicios-div-3imagenes-render #imagen-planos,
+.main-servicios .servicios-div-3imagenes-render .imagen-render {
+    padding: 1rem;
+  }
+  .main-servicios .div-texto-render {
+    text-align: center;
+  }
+  .main-servicios .div-remodelaciones {
+    display: flow-root;
+  }
+  .main-servicios .div-remodelaciones h3 {
+    text-align: center;
+    margin: 0 2rem;
+  }
+  .main-servicios .div-remodelaciones p {
+    text-align: center;
+    padding: 2rem;
+  }
+  .main-servicios .div-remodelaciones .imagen-plano {
+    display: none;
+  }
+  .main-servicios .div-remodelaciones .imagen-descripcion-plano {
+    display: none;
+  }
+  .main-servicios .div-fachadas {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "texto-fachadas" "img-fachadas";
+  }
+  .main-servicios .div-fachadas .div-fachadas-titulo-texto {
+    text-align: center;
+    font-size: 2rem;
+    margin: 4rem 2rem 1rem 2rem;
+  }
+  .main-servicios .div-fachadas .imagen-fachada {
+    width: 100%;
+    padding: 4rem 2rem 1rem 1rem;
+  }
+  .main-servicios .div-obras {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "titulodescripcion-obras" "imagen1-obras" "imagen2-obras";
+  }
+  .main-servicios .div-obras .imagen1-obras {
+    width: 100%;
+    padding: 1rem;
+  }
+  .main-servicios .div-obras .imagen2-obras {
+    width: 100%;
+    padding: 1rem;
+  }
   /* CONTACTO */
   .section-contacto {
     display: grid;
@@ -590,32 +711,18 @@ footer .divfooter3 img {
     grid-template-areas: "div-contacto1" "div-contacto2";
     row-gap: 2rem;
   }
-  .div-contactanos-contacto {
+  .section-contacto .div-contactanos-contacto {
     width: 100%;
     grid-area: div-contacto1;
   }
-  .div-formulario-contacto {
+  .section-contacto .div-contactanos-contacto img {
+    height: 4.5rem;
+  }
+  .section-contacto .div-formulario-contacto {
     width: 100%;
     grid-area: div-contacto2;
   }
-  .section-contacto h2 {
+  .section-contacto .section-contacto h2 {
     font-size: 2.3rem;
-  }
-}
-@media screen and (max-width: 450px) {
-  /* INDEX */
-  .divFondoNaranja {
-    width: 80%;
-    height: 23%;
-  }
-  .divTextoImgIndex p {
-    font-size: 3rem;
-  }
-  /* SOBRE NOSOTROS */
-  .divImgNuestraOficina {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: "imagenlocal1" "imagenlocal2" "imagenlocal3";
   }
 }/*# sourceMappingURL=styles.css.map */
