@@ -148,7 +148,7 @@ footer #boton-contactanos-footer {
   transition-duration: 0.2s;
 }
 footer #boton-contactanos-footer:hover {
-  color: black; /*            <-- esta propiedad no me la toma*/
+  color: black;
   background-color: #FFA942;
 }
 footer .divfooter3 h3 {
@@ -580,9 +580,6 @@ footer .divfooter3 img {
   .sectionSobreNosotros {
     display: flow-root;
     height: 100%;
-    /*grid-template-columns: 100%;
-    grid-template-rows: 40vh 40vh 40vh;
-    grid-template-areas: "div-nombres" "div-logo" "info-personal";*/
     border-bottom: 0;
   }
   .sectionSobreNosotros .div-nombres {
